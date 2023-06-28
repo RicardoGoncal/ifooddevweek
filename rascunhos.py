@@ -69,3 +69,19 @@ analisador = AnalisadorFeedback(feedbacks)
 nps = analisador.calcular_nps()
 
 print(nps)
+
+
+
+# TODO: Baixar arquivo CSV do Google Drive
+"""
+Este código baixa um arquivo CSV de feedbacks do Google Drive e carrega os dados em um DataFrame pandas.
+
+O arquivo é identificado por um ID único ('file_id'), que é extraído da URL do arquivo no Google Drive.
+A URL do arquivo no Google Drive tem o seguinte formato:
+https://drive.google.com/file/d/FILE_ID/view?usp=sharing
+"""
+
+import gdown
+
+file_id = ''
+gdown.download(f'https://drive.google.com/uc?id={file_id}', 'nomedoarquivo.csv')
